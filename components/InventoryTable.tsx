@@ -27,12 +27,22 @@ export default function InventoryTable({
 
         <tbody>
           {items.map((item) => (
+            // <tr
+            //   key={item._id}
+            //   className={`border-t ${
+            //     item.lowStock ? "bg-red-50" : ""
+            //   }`}
+            // >
             <tr
-              key={item._id}
-              className={`border-t ${
-                item.lowStock ? "bg-red-50" : ""
+            key={item._id}
+            className={`border-b border-white/5 transition
+              ${
+                item.lowStock
+                  ? "bg-red-900/20 border-l-4 border-red-500"
+                  : "hover:bg-white/5"
               }`}
-            >
+          >
+
               <td className="p-3">{item.sku}</td>
               <td className="p-3">{item.name}</td>
               <td className="p-3 font-medium">{item.quantity}</td>
