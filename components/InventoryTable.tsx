@@ -1,3 +1,5 @@
+"use client";
+
 import { InventoryItem } from "@/types/inventory";
 import StatusBadge from "./StatusBadge";
 import StockControls from "./StockControls";
